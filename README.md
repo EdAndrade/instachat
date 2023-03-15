@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-    O instachat é uma pequena que consiste em salas de chat particulares acessíveis com um código, são salas temporárias para trocas de mensagens em tempo real.
+    O instachat é um web app que consiste em salas de chat particulares acessíveis com um código, são salas temporárias para trocas de mensagens em tempo real.
 </p>
 
 ## :rocket: Tecnologias
@@ -21,7 +21,7 @@
 
 ## :computer: Como rodar
 
-* Clone este respositório
+* Clone este repositório
 
 ```bash
 $ git clone https://github.com/EdAndrade/instachat
@@ -33,7 +33,7 @@ $ git clone https://github.com/EdAndrade/instachat-client
 $ git clone https://github.com/EdAndrade/instachat-api-v2
 ```
 
-Nota: Neste README.md assume-se que você tenha o Docker e o docker-compose instalados na sua máquina, caso não tenha, acesse [este link](https://docs.docker.com/engine/install/) para saber sobre a instalção do docker, e [este link](https://docs.docker.com/compose/install/) para saber sobre a instalação do docker-compose
+Nota: Neste README.md assume-se que você tenha o Docker e o docker-compose instalados na sua máquina, caso não tenha, acesse [este link](https://docs.docker.com/engine/install/) para saber sobre a instalação do docker, e [este link](https://docs.docker.com/compose/install/) para saber sobre a instalação do docker-compose
 
 * Crie um arquivo `docker-compose.yml` e cole o código abaixo
 
@@ -70,8 +70,8 @@ services:
 ```
 
 Notas: 
-    * Certifique-se que as portas que serão usadas na sua maquina estão livres
-    * Não esqueça de atribuir o username e a password nas variáveis de ambiente do serviço db
+Certifique-se que as portas que serão usadas na sua maquina estão livres
+Não esqueça de atribuir o username e a password nas variáveis de ambiente do serviço db
 
 * Em seguida execute o seguinte comando para levantar todos serviços
 
