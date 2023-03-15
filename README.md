@@ -21,13 +21,13 @@
 
 ## :computer: Como rodar
 
-* Clone este repositório
+Clone este repositório
 
 ```bash
 $ git clone https://github.com/EdAndrade/instachat
 ```
 
-* Clone o repositório do cliente e do servidor para dentro da pasta do projecto acima clonado (`instachat`)
+Clone o repositório do cliente e do servidor para dentro da pasta do projecto acima clonado (`instachat`)
 ```bash
 $ git clone https://github.com/EdAndrade/instachat-client
 $ git clone https://github.com/EdAndrade/instachat-api-v2
@@ -35,7 +35,7 @@ $ git clone https://github.com/EdAndrade/instachat-api-v2
 
 Nota: Neste README.md assume-se que você tenha o Docker e o docker-compose instalados na sua máquina, caso não tenha, acesse [este link](https://docs.docker.com/engine/install/) para saber sobre a instalação do docker, e [este link](https://docs.docker.com/compose/install/) para saber sobre a instalação do docker-compose
 
-* Crie um arquivo `docker-compose.yml` e cole o código abaixo
+Crie um arquivo `docker-compose.yml` e cole o código abaixo
 
 ```docker
 version: '3.8'
@@ -69,11 +69,22 @@ services:
       - "9090:3000"
 ```
 
+Na pasta do server crie um arquivo `.env` e coloque as variáveis abaixo:
+```
+CONNECTION_STRING="mongodb://[USERNAME_DA_SUA_PREFERENCIA]:[PASSWORD_DA_SUA_PREFERENCIA]@db:27017/admin"
+SECRETY_CHAT_CODE="[QUALQUER_COISA_ALEATÓRIA]"
+```
+
 Notas: 
 Certifique-se que as portas que serão usadas na sua maquina estão livres
-Não esqueça de atribuir o username e a password nas variáveis de ambiente do serviço db
+Não esqueça de atribuir o username e a password nas variáveis de ambiente do serviço db, e de substituir as mesmas variáveis na `CONNECTION_STRING` acima
 
-* Em seguida execute o seguinte comando para levantar todos serviços
+Na pasta do client crie um arquivo `.env` e coloque a seguinte variável:
+```
+SERVER_IP="[IP_DA_SUA_MAQUINA]"
+```
+
+Em seguida execute o seguinte comando para levantar todos serviços
 
 ```docker
 docker-compose up -d --build
