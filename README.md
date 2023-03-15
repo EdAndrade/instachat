@@ -48,7 +48,7 @@ services:
       - "4545:3000"
   backend:
     build:
-      context: ./instachat-server
+      context: ./instachat-api-v2
     ports:
       - "8085:8085"
       - "8081:8081"
